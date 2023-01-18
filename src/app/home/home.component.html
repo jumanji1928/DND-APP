@@ -1,1 +1,26 @@
-<p>home works!</p>
+<div class="container-fluid">
+    <div class="open-p">
+        <h2>Welcome to DnD Creator!</h2>
+        <p>This app is desgined to make a user friendly interface for D&D lovers! This platform contains content from D&D Beyond and dnd5e.wikidot </p>
+    </div>
+    <div class="row">
+        <ng-container *ngFor="let cards of home_cards">
+            <div class="col-md-4 col-sm-6 col-12 my-2">
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>
+                            {{cards.title}}
+                        </mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <ng-container *ngFor="let btn of cards.button">
+                            <a mat-raised-button class="m-1" [color]="btn.color" [href]="btn.link">
+                                {{btn.title}}
+                            </a>
+                        </ng-container>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </ng-container>
+    </div>
+</div>

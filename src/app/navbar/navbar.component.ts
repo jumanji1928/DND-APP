@@ -10,7 +10,7 @@ import { map, shareReplay } from 'rxjs/operators';
 })
 export class NavbarComponent {
 
-  links = [{link: '/home', title: 'Home'}];
+  links = [{link: '/home', title: 'Home'}, {link: '/rules', title:'Rules'}, {link: '/classes', title: 'Classes'}, {link: '/races', title: 'Races'},{link: '/spells', title: 'Spells'}, {link:'/feats', title: 'Feats'}, {link: '/backgrounds', title:'Backgrounds'} ];
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
